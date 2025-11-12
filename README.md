@@ -182,7 +182,7 @@ User Prompt:
 Reaction between Zn and HCl.
 This ensures factuality, educational tone, and consistent structure across responses.
 
-# ⚙️ Setup and Usage Guide 
+# Setup and Usage Guide 
 This guide walks you through every step to set up, configure, and run the Virtual Chemistry RAG Lab — from environment creation to API key setup and app execution.
 
 ## 🧪 1️⃣ Prerequisites
