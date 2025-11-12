@@ -244,10 +244,10 @@ The assistant retrieves factual data from your /data folder and generates an exp
 
 # 🧩 1️⃣0️⃣ Troubleshooting
 Issue Possible Cause Solution
-No API key found - .env missing or wrong variable name = Verify key name matches table above
-ImportError: sentence_transformers - Dependencies not installed = Run pip install -r requirements.txt
-Streamlit not found - Virtual env not activated = Activate environment again
-Slow responses- Free-tier model rate limits Try smaller queries or switch model provider
+- No API key found - .env missing or wrong variable name = Verify key name matches table above
+- ImportError: sentence_transformers - Dependencies not installed = Run pip install -r requirements.txt
+- Streamlit not found - Virtual env not activated = Activate environment again
+- Slow responses- Free-tier model rate limits Try smaller queries or switch model provider
 
 # 🧾 1️⃣1️⃣ Next Steps
 🧠 Add small new .txt files to the data/ folder for more reactions.
@@ -255,11 +255,11 @@ Slow responses- Free-tier model rate limits Try smaller queries or switch model 
 Implementation Details
 Component Technology Stack
 UI Framework Streamlit
-Embedding Model SentenceTransformers (MiniLM / all-MiniLM-L6-v2)
-Vector Database FAISS / Chroma
-Programming Language Python 3.12
-Libraries LangChain, numpy, pandas, dotenv
-Deployment Localhost / Ready Tensor compatible
+- Embedding Model SentenceTransformers (MiniLM / all-MiniLM-L6-v2)
+- Vector Database FAISS / Chroma
+- Programming Language Python 3.12
+- Libraries LangChain, numpy, pandas, dotenv
+- Deployment Localhost / Ready Tensor compatible
 
 # Results and Discussion
 The system successfully demonstrated:
@@ -270,11 +270,11 @@ The system successfully demonstrated:
 - Preliminary evaluations with domain-specific test queries show that retrieved responses align closely with verified chemical reactions, minimizing hallucinations compared to pure LLM-based generation.
 
 # Future Work
--🧬 Multilingual RAG Expansion – Support Indian languages for wider access.
--⚙️ Dynamic Knowledge Ingestion – Allow uploading of new documents.
--🎨 Reaction Visualization – Add chemical equation animations and molecular imagery.
--🧠 Cross-domain Integration – Extend to physics and biology experiments.
--🔒 Secure Collaboration – Incorporate user experiment history and authentication.
+- 🧬 Multilingual RAG Expansion – Support Indian languages for wider access.
+- ⚙️ Dynamic Knowledge Ingestion – Allow uploading of new documents.
+- 🎨 Reaction Visualization – Add chemical equation animations and molecular imagery.
+- 🧠 Cross-domain Integration – Extend to physics and biology experiments.
+- 🔒 Secure Collaboration – Incorporate user experiment history and authentication.
 
 # Conclusion
 The Virtual Chemistry RAG Lab showcases the potential of combining retrieval-augmented architectures with interactive learning interfaces for scientific domains.
