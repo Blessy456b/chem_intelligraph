@@ -17,6 +17,16 @@ Screenshot from 2025-11-04 12-53-09.png
 3. [Knowledge Source](#knowledge-source)
 4. [Text Preprocessing](#text-preprocessing)
 5. [ Prompt Template Design](#prompt-template-design)
+6. [ Modes of Operation](#modes-of-operation)
+7. [ Setup & Usage Guide — Virtual Chemistry RAG Lab](#setup-&-usage-guide—virtual-chemistry-rag-lab)
+8. [ Modes of Operation](#understanding-operational-modes)
+9. [ Examples ](#example-queries-to-try)
+10. [ Results and Discussion](#results-and-discussion)
+11. [ Troubleshooting](#troubleshooting)
+10. [ Next Steps](#next-steps)
+11. [ Future Work](#future-work)
+12. [ Conclusion](#conclusion)
+
 
 # Introduction
 Recent advances in large language models (LLMs) have enabled systems capable of generating natural, human-like responses to complex queries.
@@ -172,14 +182,17 @@ This installs:
 - SentenceTransformers (embedding model)
 - Groq LLM interfaces
 - dotenv (for API key management)
-🔐 5️⃣ API Key Setup
+- 
+### 🔐 5️⃣ API Key Setup
 Your assistant supports GROQ model backend
 
 Provider Model Example Environment Variable
 
 🧠 Groq llama-3.1-8b-instant GROQ_API_KEY
 🔧 Create a .env file inside /src:
+```bash
 nano .env
+```
 Add one/more of the following lines depending on which API you plan to use:
 
 Example 1 — Using Groq
@@ -189,28 +202,33 @@ GROQ_API_KEY=your_groq_key_here
 Do not share .env files or commit them to GitHub.
 Instead, include a .env_example file showing the required variable names without real values.
 
-⚗️ 6️⃣ Run the Application
+### ⚗️ 6️⃣ Run the Application
 Make sure that you are in src directory ; if not run - cd rag_lab/src
 
-Option 1 — Streamlit Interface (Recommended)
+#### Option 1 — Streamlit Interface (Recommended)
 Launch the interactive chemistry lab UI:
+```bash
 streamlit run app_lab_chat.py
+```
 Once launched, open the local URL displayed in your terminal (e.g., 
 http://localhost:8501
 ) to interact with the assistant.
 You’ll see:
-Dropdowns for selecting reactants
-Visual test tubes and reactions
-A chat assistant powered by RAG retrieval
-Option 2 — CLI Testing (Without UI)
+- Dropdowns for selecting reactants
+- Visual test tubes and reactions
+- A chat assistant powered by RAG retrieval
+
+#### Option 2 — CLI Testing (Without UI)
 If you prefer to test the logic from terminal:
+```bash
 python3 rag_assistant.py
-🧠 7️⃣ Understanding Operational Modes
+```
+# 🧠 7️⃣ Understanding Operational Modes
 The RAG assistant supports two reasoning modes:
 
 Mode Behavior Use Case
-⚖️ Strict Mode Answers only from retrieved knowledge base Verified scientific facts
-🎨 Creative Mode Combines retrieved context + LLM reasoning Educational explanations, inferences
+- ⚖️ Strict Mode Answers only from retrieved knowledge base Verified scientific facts
+- 🎨 Creative Mode Combines retrieved context + LLM reasoning Educational explanations, inferences
 
 To change mode:
 
@@ -218,20 +236,20 @@ assistant = RAGAssistant(mode="creative")
 or
 toggle in GUI
 
-🚀 9️⃣ Example Queries to Try
+# 🚀 9️⃣ Example Queries to Try
 Once running, try:
 “What happens when zinc reacts with hydrochloric acid?”
 “Explain oxidation .”
 The assistant retrieves factual data from your /data folder and generates an explainable, contextual response.
 
-🧩 1️⃣0️⃣ Troubleshooting
+# 🧩 1️⃣0️⃣ Troubleshooting
 Issue Possible Cause Solution
 No API key found - .env missing or wrong variable name = Verify key name matches table above
 ImportError: sentence_transformers - Dependencies not installed = Run pip install -r requirements.txt
 Streamlit not found - Virtual env not activated = Activate environment again
 Slow responses- Free-tier model rate limits Try smaller queries or switch model provider
 
-🧾 1️⃣1️⃣ Next Steps
+# 🧾 1️⃣1️⃣ Next Steps
 🧠 Add small new .txt files to the data/ folder for more reactions.
 
 Implementation Details
@@ -243,81 +261,42 @@ Programming Language Python 3.12
 Libraries LangChain, numpy, pandas, dotenv
 Deployment Localhost / Ready Tensor compatible
 
-Results and Discussion
+# Results and Discussion
 The system successfully demonstrated:
 
-High factual consistency due to retrieval grounding.
-Interactive learning engagement in virtual chemistry experiments.
-Explainability and transparency through human-readable .txt knowledge bases.
-Preliminary evaluations with domain-specific test queries show that retrieved responses align closely with verified chemical reactions, minimizing hallucinations compared to pure LLM-based generation.
+- High factual consistency due to retrieval grounding.
+- Interactive learning engagement in virtual chemistry experiments.
+- Explainability and transparency through human-readable .txt knowledge bases.
+- Preliminary evaluations with domain-specific test queries show that retrieved responses align closely with verified chemical reactions, minimizing hallucinations compared to pure LLM-based generation.
 
-Future Work
+# Future Work
 -🧬 Multilingual RAG Expansion – Support Indian languages for wider access.
 -⚙️ Dynamic Knowledge Ingestion – Allow uploading of new documents.
 -🎨 Reaction Visualization – Add chemical equation animations and molecular imagery.
 -🧠 Cross-domain Integration – Extend to physics and biology experiments.
 -🔒 Secure Collaboration – Incorporate user experiment history and authentication.
 
-Conclusion
+# Conclusion
 The Virtual Chemistry RAG Lab showcases the potential of combining retrieval-augmented architectures with interactive learning interfaces for scientific domains.
 By grounding AI reasoning in transparent, verifiable text sources, the system enhances both trust and educational value in AI-driven science tools.
 This framework can be extended across multiple domains to promote explainable, domain-specific AI reasoning for academic and research applications.
 
-References
-Reimers, N. & Gurevych, I. Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019.
-LangChain Documentation. Building RAG Pipelines. 2024.
-Streamlit Inc. Streamlit for Interactive Data Apps.
-Acknowledgements
+# References
+- Reimers, N. & Gurevych, I. Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019.
+- Langraph Documentation
+- LangChain Documentation. Building RAG Pipelines. 2024.
+- Streamlit Inc. Streamlit for Interactive Data Apps.
+
+# Acknowledgements
 Developed by Blessy Thomas
 Built with curiosity using Streamlit, LangChain, and Vector Search technologies for Ready Tensor certification.
 
-Contact
+# Contact
 For queries
-github : 
+- github : 
 https://github.com/Blessy456b
 
-gmail : 
+- gmail : 
 blessy456bthomas@gmail.com
 
-Comments
-(1)
-Most recent
 
-
-
-
-😀
-Comment
-ready-tensor
-Ready Tensor
-last week
-Interesting project! Thanks for sharing!
-
-Like (1)
-Reply
-1 Reply
-Code
-You might be interested
-image
-ChemIntelliGraph — Agentic RAG Framework for Chemistry Knowledge Reasoning
-Nov 11, 20254 reads
-AgenticAIChemistry+5
-No image provided
-Module 1 Project
-lptpavinatarajan01
-Sep 26, 20257 reads
-AAIDC2025AI+4
-image
-RAG CHATBOT - For college students query about degree rules and regulations (Project-1)
-Oct 03, 20259 reads
-image
-BiochemRAG: A Retrieval-Augmented Generation System for Domain-Specific Biochemistry Topic
-Jun 13, 202521 reads
-AAIDCAmino Acid Biosynthesis+7
-About
-Docs
-Privacy
-Copyright
-Contact
-Support
-© Ready Tensor, Inc.
