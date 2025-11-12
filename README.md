@@ -1,7 +1,7 @@
 
 # 🧪 Chemixtry Chatbot – Virtual RAG Lab for Chemical Reactions
 
-<div align="center">
+<div align="left">
   
 [![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
 [![Powered by LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
