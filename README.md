@@ -98,11 +98,14 @@ Remember: You are not generating — you are retrieving factual info only.
 This configuration enforces retrieval integrity — the model is constrained to operate purely within the context of verified chemistry data.
 It prevents hallucination and maintains scientific trustworthiness.
 
-![Strictmode-retrieve ](hil.png)
+![Strictmode-retrieve ](images/hil.png)
 
 If any retrieval happens then it is sent to remaining 2 agents for fact checking and safety score checking.
+### Fact Checking Agent
 
 ![ChemIntelliGraph UI](images/fa1.png)
+
+### Safety Scoring Agent
 
 ![ChemIntelliGraph UI](images/sa1.png)
 
