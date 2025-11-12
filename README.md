@@ -22,6 +22,7 @@ It combines **AI-driven language understanding**, **structured knowledge retriev
 - Providing structured, explainable, and contextual responses
   
 Built with **Streamlit**, **LangChain**, and **modern AI models**, the system serves as a dynamic virtual lab for students, educators, and researchers alike.
+
 ![ChemIntelliGraph UI](images/chemintel1.png)
 
 ## Table of Contents
