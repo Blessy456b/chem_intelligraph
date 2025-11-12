@@ -1,12 +1,16 @@
 # streamlit_app.py
-import os
 import streamlit as st
-from agents_orchestrator import run_multi_agent, load_summary_memory
-from dotenv import load_dotenv
 
-load_dotenv()
+# Try to prefer the langraph-based orchestrator if present, otherwise fall back
+try:
+    from agents_orchestrator_langraph import run_multi_agent, load_summary_memory
+except Exception:
+    # Fallback to original orchestrator for compatibility
+    from agents_orchestrator import run_multi_agent, load_summary_memory
 
-st.set_page_config(page_title="ChemIntelliGraph — Agentic RAG Lab", layout="wide")
+import os
+
+st.set_page_config(page_title="ChemIntelliGraph — Agentic RAG Chem Lab", layout="wide")
 st.title("🧪 ChemIntelliGraph — Agentic RAG Lab")
 st.markdown("Enter two reactants. System tries RAG → LLM → Fact-check (SerpAPI) → Safety → Memory")
 
@@ -42,3 +46,16 @@ if st.button("Analyze Reaction"):
         st.dataframe(mem[::-1])  # recent first
     else:
         st.write("No memory stored yet.")
+
+st.markdown("---")
+st.markdown("### 🧫 Virtual Test Tubes")
+color_map = {"H2": "#66ccff", "H₂": "#66ccff", "O2": "#99ccff", "O₂": "#99ccff", "Na": "#cccccc", "HCl": "#ff6666", "Zn": "#999999", "S": "#ffcc00"}
+tube_html = f"""
+<div style="display:flex;gap:20px;">
+  <div style='background:{color_map.get(reactant_a, "#ccc")};width:80px;height:120px;
+  border-radius:40px 40px 10px 10px;text-align:center;color:white;line-height:120px;font-weight:bold;'>{reactant_a}</div>
+  <div style='background:{color_map.get(reactant_b, "#ccc")};width:80px;height:120px;
+  border-radius:40px 40px 10px 10px;text-align:center;color:white;line-height:120px;font-weight:bold;'>{reactant_b}</div>
+</div>
+"""
+st.markdown(tube_html, unsafe_allow_html=True)
