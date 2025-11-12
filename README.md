@@ -68,23 +68,22 @@ The project focuses on:
 - Domain-specific knowledge retrieval (Chemistry)
 - Transparent and explainable AI reasoning
 - Multimodal user interaction for simulation and learning
-- Methodology
+
+# Methodology
 The system consists of three key layers:
 
 - Frontend (Streamlit Interface) – Provides an interactive, visual lab environment.
 - RAG Core Engine – Combines retrieval and generation using semantic embeddings.
 - Vector Database Layer – Stores and retrieves chemistry knowledge in vectorized form.
 
-
 # 3.1 Data Preparation
-
-## Knowledge Source:
+# Knowledge Source:
 The data/ directory contains curated .txt documents representing verified chemistry knowledge such as:
 
 - reactions_knowledge.txt — common inorganic reactions
 - water_formation.txt — oxidation and hydrogen combustion
 - biotechnology.txt — cross-disciplinary test file
-## Text Preprocessing:
+# Text Preprocessing:
 Documents are cleaned, tokenized, and chunked into semantically coherent units.
 
 # 3.2 Vectorization and Retrieval
@@ -97,7 +96,7 @@ Documents are cleaned, tokenized, and chunked into semantically coherent units.
 
 # 3.3 Generation and Prompt Engineering
 
-## 🧩 Prompt Template Design
+# 🧩 Prompt Template Design
 The Virtual Chemistry RAG Lab employs a structured prompt-based reasoning framework embedded within the RAGAssistant class.
 This design ensures that the language model operates under controlled scientific constraints, adapting its reasoning behavior according to the selected operational mode —** Strict or Creative.**
 
