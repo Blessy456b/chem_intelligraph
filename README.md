@@ -1,39 +1,6 @@
 
 # Chemixtry Chatbot - Lab for Chemical Reactions
 
-
-Table of contents
-
-Chemixtry Chatbot - Lab for Chemical Reactions
-
-
-## 🧪 Virtual Chemistry RAG Lab: An AI-Augmented Interactive Platform for Scientific Knowledge Retrieval and Reasoning
-
-
-Introduction
-
-
-Methodology
-
-
-Knowledge Source:
-
-
-Text Preprocessing:
-
-
-🧩 Prompt Template Design
-
-
-1️⃣ System Prompt (Strict Mode)
-
-
-2️⃣ System Prompt (Creative Mode)
-
-
-3️⃣ User Prompt Template
-
-
 ## 🧪 Virtual Chemistry RAG Lab: An AI-Augmented Interactive Platform for Scientific Knowledge Retrieval and Reasoning
 The Chemixtry Chatbot Lab for Chemical Reactions is a RAG Lab presents an innovative approach to interactive science learning and reasoning using Retrieval-Augmented Generation (RAG).
 
@@ -42,6 +9,14 @@ By combining semantic retrieval, contextual prompt engineering, and generative r
 “What happens when Zinc reacts with Hydrochloric acid?”
 "Explain oxidation in simple terms.”
 Screenshot from 2025-11-04 12-53-09.png
+
+## Table of Contents
+
+1. [Introduction](#introduction) 
+2. [Methodology](#methodology) 
+3. [Knowledge Source](#knowledge-source)
+4. [Text Preprocessing](#text-preprocessing)
+5. [ Prompt Template Design](#prompt-template-design)
 
 # Introduction
 Recent advances in large language models (LLMs) have enabled systems capable of generating natural, human-like responses to complex queries.
