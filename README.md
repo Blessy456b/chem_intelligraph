@@ -8,7 +8,7 @@ The system integrates a Streamlit-based multimodal interface with a vectorized k
 By combining semantic retrieval, contextual prompt engineering, and generative reasoning, the model provides explainable, factual, and educationally grounded answers to queries such as
 “What happens when Zinc reacts with Hydrochloric acid?”
 "Explain oxidation in simple terms.”
-Screenshot from 2025-11-04 12-53-09.png
+![ChemIntelliGraph UI](images/chemintel1.png)
 
 ## Table of Contents
 
