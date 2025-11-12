@@ -46,7 +46,8 @@ The system consists of three key layers:
 - Frontend (Streamlit Interface) – Provides an interactive, visual lab environment.
 - RAG Core Engine – Combines retrieval and generation using semantic embeddings.
 - Vector Database Layer – Stores and retrieves chemistry knowledge in vectorized form.
-Screenshot from 2025-11-04 13-25-54.png
+![Uploading image.png…]()
+
 
 # 3.1 Data Preparation
 
