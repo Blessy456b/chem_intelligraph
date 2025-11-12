@@ -98,6 +98,8 @@ Remember: You are not generating — you are retrieving factual info only.
 This configuration enforces retrieval integrity — the model is constrained to operate purely within the context of verified chemistry data.
 It prevents hallucination and maintains scientific trustworthiness.
 
+#### [A] If Retrieval found in strict mode 
+
 ![Strictmode-retrieve ](images/hil.png)
 
 If any retrieval happens then it is sent to remaining 2 agents for fact checking and safety score checking.
@@ -108,6 +110,11 @@ If any retrieval happens then it is sent to remaining 2 agents for fact checking
 ### Safety Scoring Agent
 
 ![ChemIntelliGraph UI](images/sa1.png)
+
+#### [B] If Retrieval not found in strict mode 
+
+
+![ChemIntelliGraph UI](images/na1.png)
 
 ### 2️⃣ System Prompt (Creative Mode)
 Used when the model is allowed to perform guided reasoning or educational expansion beyond the retrieved text.
