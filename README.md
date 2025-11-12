@@ -8,6 +8,7 @@ The system integrates a Streamlit-based multimodal interface with a vectorized k
 By combining semantic retrieval, contextual prompt engineering, and generative reasoning, the model provides explainable, factual, and educationally grounded answers to queries such as
 “What happens when Zinc reacts with Hydrochloric acid?”
 "Explain oxidation in simple terms.”
+
 ![ChemIntelliGraph UI](images/chemintel1.png)
 
 ## Table of Contents
@@ -46,7 +47,6 @@ The system consists of three key layers:
 - Frontend (Streamlit Interface) – Provides an interactive, visual lab environment.
 - RAG Core Engine – Combines retrieval and generation using semantic embeddings.
 - Vector Database Layer – Stores and retrieves chemistry knowledge in vectorized form.
-![Uploading image.png…](/images/chemintel1.png)
 
 
 # 3.1 Data Preparation
@@ -98,6 +98,14 @@ Remember: You are not generating — you are retrieving factual info only.
 This configuration enforces retrieval integrity — the model is constrained to operate purely within the context of verified chemistry data.
 It prevents hallucination and maintains scientific trustworthiness.
 
+![Strictmode-retrieve ](hi.png)
+
+If any retrieval happens then it is sent to remaining 2 agents for fact checking and safety score checking.
+
+![ChemIntelliGraph UI](images/fa1.png)
+
+![ChemIntelliGraph UI](images/sa1.png)
+
 ### 2️⃣ System Prompt (Creative Mode)
 Used when the model is allowed to perform guided reasoning or educational expansion beyond the retrieved text.
 You are ChemGPT Creative Mode — a Chemistry Assistant that combines
@@ -111,6 +119,14 @@ Rules:
 - Always include safety notes and clear disclaimers.
 - Keep the tone educational and accurate.
 This configuration encourages exploratory reasoning while maintaining transparency — any inference is explicitly labeled, ensuring the distinction between factual and generated content.
+
+
+
+![ChemIntelliGraph UI](images/chemintel1.png)
+
+
+![ChemIntelliGraph UI](images/chemintel1.png)
+
 
 ### 3️⃣ User Prompt Template
 Both modes utilize a shared template that injects retrieved text and user query into the LLM input during inference:
