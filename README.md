@@ -238,6 +238,11 @@ GROQ_API_KEY="< Please fill your GROK API key >"
 Do not share .env files or commit them to GitHub.
 Instead, include a .env_example file showing the required variable names without real values.
 
+### ⚗️ 6️⃣ Run the Application
+Make sure that you are in src directory ; if not run - 
+```bash
+cd rag_lab/src
+```
 ### ⚙️ 3️⃣ Export MCP_SECRET before starting the backend
 
 When you start your backend server, you’ll want this environment variable available to any process (especially the Streamlit app).
@@ -267,12 +272,6 @@ You’ll see something like:
 - ✅ VectorDB initialized: rag_documents
 - ✅ Chemistry Assistant ready in _____ Mode.
 
-
-### ⚗️ 6️⃣ Run the Application
-Make sure that you are in src directory ; if not run - 
-```bash
-cd rag_lab/src
-```
 #### Option 1 — Streamlit Interface (Recommended)
 Launch the interactive chemistry lab UI:
 ```bash
