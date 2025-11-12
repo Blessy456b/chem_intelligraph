@@ -11,6 +11,14 @@ By combining semantic retrieval, contextual prompt engineering, and generative r
 
 ![ChemIntelliGraph UI](images/chemintel1.png)
 
+[![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
+[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)]()
+
+</div>
+
 ## Table of Contents
 
 1. [Introduction](#introduction) 
@@ -28,34 +36,6 @@ By combining semantic retrieval, contextual prompt engineering, and generative r
 11. [ Future Work](#future-work)
 12. [ Conclusion](#conclusion)
 
-[![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
-[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)]()
-
-</div>
-
----
-
-## 📚 Table of Contents
-
-1. [Introduction](#introduction)  
-2. [Methodology](#methodology)  
-3. [Knowledge Source](#knowledge-source)  
-4. [Text Preprocessing](#text-preprocessing)  
-5. [Prompt Template Design](#prompt-template-design)  
-6. [Modes of Operation](#modes-of-operation)  
-7. [Setup and Usage Guide](#setup-and-usage-guide)  
-8. [Example Queries to Try](#example-queries-to-try)  
-9. [Troubleshooting](#troubleshooting)  
-10. [Next Steps](#next-steps)  
-11. [Results and Discussion](#results-and-discussion)  
-12. [Future Work](#future-work)  
-13. [Conclusion](#conclusion)  
-14. [References](#references)  
-15. [Acknowledgements](#acknowledgements)  
-16. [Contact](#contact)
 # Introduction
 Recent advances in large language models (LLMs) have enabled systems capable of generating natural, human-like responses to complex queries.
 However, pure generative models often lack factual grounding, especially in scientific domains where accuracy is paramount.
@@ -365,8 +345,8 @@ This framework can be extended across multiple domains to promote explainable, d
 - Streamlit Inc. Streamlit for Interactive Data Apps.
 
 # Acknowledgements
-Developed by Blessy Thomas
-Built with curiosity using Streamlit, LangChain, and Vector Search technologies for Ready Tensor certification.
+- Developed by Blessy Thomas
+- Built with curiosity using Streamlit, LangChain, and Vector Search technologies for Ready Tensor certification.
 
 # Contact
 For queries
