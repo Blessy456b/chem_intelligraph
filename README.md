@@ -1,20 +1,27 @@
 
-# Chemixtry Chatbot - Lab for Chemical Reactions
-<div>
+# 🧪 Chemixtry Chatbot – Virtual RAG Lab for Chemical Reactions
+
+<div align="center">
+  
 [![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
-[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
+[![Powered by LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
+
 </div>
---- 
-# 🧪Virtual Chemistry RAG Lab: An AI-Augmented Interactive Platform for Scientific Knowledge Retrieval and Reasoning
-The Chemixtry Chatbot Lab for Chemical Reactions is a RAG Lab presents an innovative approach to interactive science learning and reasoning using Retrieval-Augmented Generation (RAG).
 
-The system integrates a Streamlit-based multimodal interface with a vectorized knowledge base of curated chemistry documents to simulate laboratory experimentation through conversational interaction.
-By combining semantic retrieval, contextual prompt engineering, and generative reasoning, the model provides explainable, factual, and educationally grounded answers to queries such as
-“What happens when Zinc reacts with Hydrochloric acid?”
-"Explain oxidation in simple terms.”
+---
 
+## 🧬 Virtual Chemistry RAG Lab: AI-Augmented Platform for Scientific Knowledge Retrieval and Reasoning
+
+**Chemixtry Chatbot Lab** is an interactive **Retrieval-Augmented Generation (RAG)** platform that revolutionizes chemical learning and reasoning.  
+It combines **AI-driven language understanding**, **structured knowledge retrieval**, and **scientific data analysis** to provide an intelligent chemistry assistant capable of:
+
+- Retrieving relevant chemical data from scientific sources  
+- Reasoning over reactions, compounds, and mechanisms  
+- Providing structured, explainable, and contextual responses
+  
+Built with **Streamlit**, **LangChain**, and **modern AI models**, the system serves as a dynamic virtual lab for students, educators, and researchers alike.
 ![ChemIntelliGraph UI](images/chemintel1.png)
 
 ## Table of Contents
