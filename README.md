@@ -1,6 +1,12 @@
 
 # Chemixtry Chatbot - Lab for Chemical Reactions
+[![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
+[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)]()
 
+</div>
 ## 🧪 Virtual Chemistry RAG Lab: An AI-Augmented Interactive Platform for Scientific Knowledge Retrieval and Reasoning
 The Chemixtry Chatbot Lab for Chemical Reactions is a RAG Lab presents an innovative approach to interactive science learning and reasoning using Retrieval-Augmented Generation (RAG).
 
@@ -10,14 +16,6 @@ By combining semantic retrieval, contextual prompt engineering, and generative r
 "Explain oxidation in simple terms.”
 
 ![ChemIntelliGraph UI](images/chemintel1.png)
-
-[![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
-[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-1E88E5?logo=python)](https://python.langchain.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)]()
-
-</div>
 
 ## Table of Contents
 
