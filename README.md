@@ -156,21 +156,6 @@ User Prompt:
 Reaction between Zn and HCl.
 This ensures factuality, educational tone, and consistent structure across responses.
 
-# Modes of Operation
-## 4.1 Retrieval Mode (Offline)
-
-- Uses only locally stored .txt documents.
-- Works entirely offline — suitable for educational institutions.
-- Ensures traceable and verifiable outputs (no hallucinations).
-
-## 4.2 Chat Mode (Interactive Q&A)
-
-- Leverages generative AI reasoning (LLM) for conceptual discussions.
-- Offers explanatory, exploratory, and creative chemistry interactions.
-- Enables contextual dialogue (“Why does heating sodium release light?”).
-- Screenshot from 2025-11-04 13-26-49.png
-- Screenshot from 2025-11-04 13-27-32.png
-
 # ⚙️ Setup & Usage Guide — Virtual Chemistry RAG Lab
 This guide walks you through every step to set up, configure, and run the Virtual Chemistry RAG Lab — from environment creation to API key setup and app execution.
 
@@ -186,8 +171,7 @@ Before you begin, ensure you have the following installed:
 ##  🧬 2️⃣ Clone the Repository
 ### Clone the project
 ```bash
-git clone 
-https://github.com/Blessy456b/rag_lab.git
+git clone https://github.com/Blessy456b/rag_lab.git
 ```
 ### Move into the project folder
 ```bash
