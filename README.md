@@ -224,18 +224,55 @@ Provider Model Example Environment Variable
 ```bash
 nano .env
 ```
-Add one/more of the following lines depending on which API you plan to use:
+# Copy to .env and fill values
+```bash
+SERPAPI_API_KEY= "< Please fill your Serp API KEY >"
+MCP_SECRET= "< Please fill MCP Key or your secret key  >"
 
-Example 1 — Using Groq
-GROQ_API_KEY=your_groq_key_here
+MCP_BASE=http://127.0.0.1:8080/tool
 
+# Optional LLM keys (only needed for creative mode)
+GROQ_API_KEY="< Please fill your GROK API key >"
+```
 ⚠️ Security Note:
 Do not share .env files or commit them to GitHub.
 Instead, include a .env_example file showing the required variable names without real values.
 
-### ⚗️ 6️⃣ Run the Application
-Make sure that you are in src directory ; if not run - cd rag_lab/src
+### ⚙️ 3️⃣ Export MCP_SECRET before starting the backend
 
+When you start your backend server, you’ll want this environment variable available to any process (especially the Streamlit app).
+
+Run:
+```bash
+export MCP_SECRET="<YOUR_RANDOM_SECRET>"
+```
+This ensures the app can verify requests coming from your MCP server.
+
+### 🚀 4️⃣ Run the MCP (FastAPI or Uvicorn) server
+
+If your project has a FastAPI server (say in mcp_server.py):
+```bash
+uvicorn mcp_server:app --host 127.0.0.1 --port 8080 --reload
+```
+
+#### ✅ It will now be available at http://127.0.0.1:8080/tool — exactly what MCP_BASE expects.
+
+### 🧠 5️⃣ Run the Streamlit UI
+
+In another terminal (same venv):
+```bash
+streamlit run streamlit_app.py
+```
+You’ll see something like:
+- ✅ VectorDB initialized: rag_documents
+- ✅ Chemistry Assistant ready in _____ Mode.
+
+
+### ⚗️ 6️⃣ Run the Application
+Make sure that you are in src directory ; if not run - 
+```bash
+cd rag_lab/src
+```
 #### Option 1 — Streamlit Interface (Recommended)
 Launch the interactive chemistry lab UI:
 ```bash
@@ -245,9 +282,8 @@ Once launched, open the local URL displayed in your terminal (e.g.,
 http://localhost:8501
 ) to interact with the assistant.
 You’ll see:
-- Dropdowns for selecting reactants
-- Visual test tubes and reactions
-- A chat assistant powered by RAG retrieval
+- Input Textbox for entering reactants
+- Visual test tubes
 
 #### Option 2 — CLI Testing (Without UI)
 If you prefer to test the logic from terminal:
@@ -269,8 +305,8 @@ toggle in GUI
 
 # 🚀 9️⃣ Example Queries to Try
 Once running, try:
-“What happens when zinc reacts with hydrochloric acid?”
-“Explain oxidation .”
+- “What happens when zinc reacts with hydrochloric acid?”
+- “Explain oxidation .”
 The assistant retrieves factual data from your /data folder and generates an explainable, contextual response.
 
 # 🧩 1️⃣0️⃣ Troubleshooting
