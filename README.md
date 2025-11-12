@@ -102,12 +102,12 @@ It prevents hallucination and maintains scientific trustworthiness.
 
 ![Strictmode-retrieve ](images/hil.png)
 
-If any retrieval happens then it is sent to remaining 2 agents for fact checking and safety score checking.
+If any retrieval happens then it is sent to remaining 2 agents for fact checking and safety checking.
 ### Fact Checking Agent
 
 ![ChemIntelliGraph UI](images/fa1.png)
 
-### Safety Scoring Agent
+### Safety Agent
 
 ![ChemIntelliGraph UI](images/sa1.png)
 
@@ -130,13 +130,17 @@ Rules:
 - Keep the tone educational and accurate.
 This configuration encourages exploratory reasoning while maintaining transparency — any inference is explicitly labeled, ensuring the distinction between factual and generated content.
 
+![ChemIntelliGraph UI](images/ca1.png)
 
+It is now passed to other 2 agents for further factual and safety checking
 
-![ChemIntelliGraph UI](images/chemintel1.png)
+### Fact Checking Agent
 
+![ChemIntelliGraph UI](images/na2.png)
 
-![ChemIntelliGraph UI](images/chemintel1.png)
+### Safety Agent
 
+![ChemIntelliGraph UI](images/na3.png)
 
 ### 3️⃣ User Prompt Template
 Both modes utilize a shared template that injects retrieved text and user query into the LLM input during inference:
