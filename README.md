@@ -183,11 +183,11 @@ Before you begin, ensure you have the following installed:
 ##  🧬 2️⃣ Clone the Repository
 ### Clone the project
 ```bash
-git clone https://github.com/Blessy456b/rag_lab.git
+git clone https://github.com/Blessy456b/chem_intelligraph.git
 ```
 ### Move into the project folder
 ```bash
-cd rag_lab/src
+cd chem_intelligraph/src
 ```
 ### 🧱 3️⃣ Create and Activate a Virtual Environment
 It is best practice to use an isolated virtual environment to manage project dependencies.
