@@ -1,0 +1,32 @@
+Title: Formation of Water
+Equation: 2H₂ + O₂ → 2H₂O
+Description: Hydrogen reacts explosively with oxygen to form water vapor.
+Conditions: Requires ignition or spark for reaction to occur.
+Observation: Produces a popping sound and condensation inside test tube.
+Type: Combination reaction
+Energy: Exothermic
+Applications: Rocket propulsion, fuel cells.
+
+
+Title: Combustion of Carbon
+Equation: C + O₂ → CO₂
+Description: Carbon burns in oxygen to form carbon dioxide.
+Conditions: High temperature (~1000°C).
+Observation: Glowing of carbon, gas formed turns lime water milky.
+Type: Combustion reaction
+Energy: Exothermic
+
+Title: Formation of Hydrogen Chloride
+Equation: H₂ + Cl₂ → 2HCl
+Description: Hydrogen and chlorine gases combine explosively under light to form hydrogen chloride gas.
+Conditions: Exposure to UV light or flame.
+Observation: Dense white fumes near the reaction zone.
+Type: Combination reaction
+Energy: Highly exothermic
+
+Title: Neutralization Reaction
+Equation: HCl + NaOH → NaCl + H₂O
+Description: Acid reacts with base to form salt and water.
+Observation: Heat released, pH moves towards 7.
+Type: Double displacement
+Energy: Exothermic

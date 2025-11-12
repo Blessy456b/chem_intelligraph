@@ -1,0 +1,28 @@
+Combustion:
+C + O₂ → CO₂
+Hydrogen reacts with oxygen to form water vapor: 2H₂ + O₂ → 2H₂O
+
+Metal-Acid Reactions:
+Zn + 2HCl → ZnCl₂ + H₂
+Fe + 2HCl → FeCl₂ + H₂
+
+Neutralization:
+NaOH + HCl → NaCl + H₂O
+
+Rust Formation:
+Fe + O₂ + H₂O → Fe₂O₃
+
+Sulfur and Oxygen:
+S + O₂ → SO₂
+
+Sodium and Chlorine:
+2Na + Cl₂ → 2NaCl
+
+Copper and Sulfur:
+Cu + S → CuS
+
+Safety Notes:
+- Hydrogen is flammable and forms explosive mixtures with air.
+- Chlorine gas is toxic and should be handled with care.
+- Neutralization reactions are exothermic.
+- Combustion reactions release heat and light.
