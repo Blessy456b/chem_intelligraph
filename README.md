@@ -223,7 +223,8 @@ This installs:
 - SentenceTransformers (embedding model)
 - Groq LLM interfaces
 - dotenv (for API key management)
-- 
+- Langraph ( for agent orchestration and tracing)
+  
 ### 🔐 5️⃣ API Key Setup
 Your assistant supports GROQ model backend
 
