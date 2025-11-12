@@ -19,7 +19,7 @@ By combining semantic retrieval, contextual prompt engineering, and generative r
 4. [Text Preprocessing](#text-preprocessing)
 5. [ Prompt Template Design](#prompt-template-design)
 6. [ Modes of Operation](#modes-of-operation)
-7. [ Setup & Usage Guide — Virtual Chemistry RAG Lab](#setup-&-usage-guide—virtual-chemistry-rag-lab)
+7. [ Setup and Usage Guide](#setup-and-usage-guide)
 8. [ Modes of Operation](#understanding-operational-modes)
 9. [ Examples ](#example-queries-to-try)
 10. [ Results and Discussion](#results-and-discussion)
@@ -156,7 +156,7 @@ User Prompt:
 Reaction between Zn and HCl.
 This ensures factuality, educational tone, and consistent structure across responses.
 
-# ⚙️ Setup & Usage Guide — Virtual Chemistry RAG Lab
+# ⚙️ Setup and Usage Guide 
 This guide walks you through every step to set up, configure, and run the Virtual Chemistry RAG Lab — from environment creation to API key setup and app execution.
 
 ## 🧪 1️⃣ Prerequisites
