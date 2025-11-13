@@ -1,11 +1,10 @@
 # rag_assistant.py
 import os
 from dotenv import load_dotenv
-from typing import Optional
 
 load_dotenv()
 
-# LLM clients are optional: use whichever keys/libs you have installed.
+# Optional: import concrete LLM wrappers (placeholders used earlier)
 try:
     from langchain_groq import ChatGroq
 except Exception:
@@ -19,22 +18,22 @@ try:
 except Exception:
     ChatGoogleGenerativeAI = None
 
-# Minimal prompt composition without relying heavily on LangChain glue (keeps portable)
 from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-
 from vectordb import VectorDB
 
 class RAGAssistant:
     """
-    RAG assistant supporting 'strict' (retrieval-only) and 'creative' (RAG+LLM) modes.
+    Chemistry RAG Assistant supporting 'strict' (retrieval-only) and 'creative' (RAG+LLM) modes.
+    Strict mode uses post-filter to return only the reaction line that contains both reactants
+    (if available) otherwise returns a clear "No known reaction..." message.
     """
 
     def __init__(self, mode: str = "strict"):
         self.mode = (mode or "strict").lower()
         self.vector_db = VectorDB()
-        self.llm = self._get_llm()  # may raise if none configured and creative mode used
-        self.chain = self._build_chain()
+        self.llm = self._get_llm()  # may be None for strict-only setups
+        self.chain = self._build_chain() if self.llm else None
         print(f"✅ Chemistry Assistant ready in {self.mode.title()} Mode.")
 
     def _get_llm(self):
@@ -45,7 +44,7 @@ class RAGAssistant:
             return ChatOpenAI(api_key=os.getenv("OPENAI_API_KEY"), model="gpt-4o-mini")
         if os.getenv("GOOGLE_API_KEY") and ChatGoogleGenerativeAI is not None:
             return ChatGoogleGenerativeAI(google_api_key=os.getenv("GOOGLE_API_KEY"), model="gemini-pro")
-        # No LLM configured — that's fine for strict mode (retrieval only)
+        # No LLM configured — that's fine for strict mode
         return None
 
     def _build_chain(self):
@@ -64,6 +63,7 @@ class RAGAssistant:
         user_template = "Context:\n{context}\n\nUser Question:\n{question}\n\nAnswer:"
         system_msg = SystemMessagePromptTemplate.from_template(system_prompt)
         user_msg = ChatPromptTemplate.from_template(user_template)
+        # If no llm, return prompt template only — but we will guard calls elsewhere
         return ChatPromptTemplate.from_messages([system_msg, user_msg]) | (self.llm or StrOutputParser()) | StrOutputParser()
 
     def add_documents(self, docs):
@@ -72,28 +72,32 @@ class RAGAssistant:
 
     def invoke(self, question: str) -> str:
         """
-        1) Retrieve top docs from VectorDB.
-        2) If strict and no context -> return explicit 'No known reaction...' message.
-        3) If creative or context present, call LLM chain (if configured). If no LLM configured and creative requested,
-           raise an informative error.
+        1) Retrieve top docs from VectorDB (n_results=3).
+        2) If strict -> post-filter for exact reaction line; return reaction or 'No known reaction...'
+        3) If creative -> build context from top chunks and call LLM chain (requires LLM configured)
         """
-        results = self.vector_db.search(question, n_results=3)
-        docs = results.get("documents", [])
-        context = "\n\n".join([d for d in docs if len(d.strip()) > 20])
+        # Basic normalization: keep original question for post-filter tokens
+        query = question.strip()
 
-        if self.mode == "strict" and not context:
+        # run retrieval
+        res = self.vector_db.search(query, n_results=3)
+        docs = res.get("documents", []) or []
+
+        # STRICT mode: only accept a chunk that contains both reactants -> extract single reaction line
+        if self.mode == "strict":
+            matched = self.vector_db.extract_reaction_line(query, docs)
+            if matched:
+                # return the matched reaction line (clean)
+                return matched
+            # if nothing matched: explicit message
             return "No known reaction found in current knowledge base."
 
-        # For strict mode with context: return the context (retrieval-only) — no LLM hallucination
-        if self.mode == "strict":
-            # return joined context as authoritative answer
-            return context.strip() or "No known reaction found in current knowledge base."
-
-        # For creative: require an LLM
-        if not self.llm:
+        # CREATIVE mode: require LLM
+        if not self.llm or not self.chain:
             raise ValueError("Creative mode requested but no LLM configured (set OPENAI_API_KEY/GROQ_API_KEY/GOOGLE_API_KEY).")
 
-        # Build final prompt and call chain
-        answer = self.chain.invoke({"context": context or "No context available", "question": question})
-        # simple hallucination guard: if strict keywords appear in output, user may want strictly retrieved content
+        # build context from retrieved docs (limit to a couple)
+        context = "\n\n".join([d for d in docs if len(d.strip()) > 20]) or "No context available"
+        # call LLM chain (LangChain core prompt)
+        answer = self.chain.invoke({"context": context, "question": question})
         return answer.strip()
