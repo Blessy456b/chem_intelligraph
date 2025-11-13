@@ -194,8 +194,8 @@ It is best practice to use an isolated virtual environment to manage project dep
 
 🐧 Linux / macOS:
 ```bash
-python3 -m venv rag_lab_env
-source rag_lab_env/bin/activate
+python3 -m venv rag_lab_env1
+source rag_lab_env1/bin/activate
 ```
 ### 📦 4️⃣ Install Required Dependencies
 Once your virtual environment is active, install all dependencies:
@@ -238,7 +238,7 @@ Instead, include a .env_example file showing the required variable names without
 ### ⚗️ 6️⃣ Run the Application
 Make sure that you are in src directory ; if not run - 
 ```bash
-cd rag_lab/src
+cd chem_intelligraph/src
 ```
 ### ⚙️ 3️⃣ Export MCP_SECRET before starting the backend
 
@@ -272,7 +272,7 @@ You’ll see something like:
 #### Option 1 — Streamlit Interface (Recommended)
 Launch the interactive chemistry lab UI:
 ```bash
-streamlit run app_lab_chat.py
+streamlit run streamlit_app.py
 ```
 Once launched, open the local URL displayed in your terminal (e.g., 
 http://localhost:8501
@@ -298,12 +298,6 @@ To change mode:
 assistant = RAGAssistant(mode="creative")
 or
 toggle in GUI
-
-# 🚀 9️⃣ Example Queries to Try
-Once running, try:
-- “What happens when zinc reacts with hydrochloric acid?”
-- “Explain oxidation .”
-The assistant retrieves factual data from your /data folder and generates an explainable, contextual response.
 
 # 🧩 1️⃣0️⃣ Troubleshooting
 Issue Possible Cause Solution
@@ -333,6 +327,7 @@ The system successfully demonstrated:
 - Preliminary evaluations with domain-specific test queries show that retrieved responses align closely with verified chemical reactions, minimizing hallucinations compared to pure LLM-based generation.
 
 # Future Work
+- This is Version V1 and next version will have graphics and better visual aids
 - 🧬 Multilingual RAG Expansion – Support Indian languages for wider access.
 - ⚙️ Dynamic Knowledge Ingestion – Allow uploading of new documents.
 - 🎨 Reaction Visualization – Add chemical equation animations and molecular imagery.
