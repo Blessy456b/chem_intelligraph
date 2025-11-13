@@ -286,7 +286,7 @@ If you prefer to test the logic from terminal:
 ```bash
 python3 rag_assistant.py
 ```
-# 🧠 7️⃣ Understanding Operational Modes
+# 🧠 Understanding Operational Modes
 The RAG assistant supports two reasoning modes:
 
 Mode Behavior Use Case
@@ -299,17 +299,17 @@ assistant = RAGAssistant(mode="creative")
 or
 toggle in GUI
 
-# 🧩 1️⃣0️⃣ Troubleshooting
+# 🧩 Troubleshooting
 Issue Possible Cause Solution
 - No API key found - .env missing or wrong variable name = Verify key name matches table above
 - ImportError: sentence_transformers - Dependencies not installed = Run pip install -r requirements.txt
 - Streamlit not found - Virtual env not activated = Activate environment again
 - Slow responses- Free-tier model rate limits Try smaller queries or switch model provider
 
-# 🧾 1️⃣1️⃣ Next Steps
+# 🧾 Next Steps
 🧠 Add small new .txt files to the data/ folder for more reactions.
 
-Implementation Details
+# ⚙️ Implementation Details
 Component Technology Stack
 UI Framework Streamlit
 - Embedding Model SentenceTransformers (MiniLM / all-MiniLM-L6-v2)
@@ -318,7 +318,7 @@ UI Framework Streamlit
 - Libraries LangChain, numpy, pandas, dotenv
 - Deployment Localhost / Ready Tensor compatible
 
-# Results and Discussion
+# 🧾 Results and Discussion
 The system successfully demonstrated:
 
 - High factual consistency due to retrieval grounding.
@@ -326,7 +326,7 @@ The system successfully demonstrated:
 - Explainability and transparency through human-readable .txt knowledge bases.
 - Preliminary evaluations with domain-specific test queries show that retrieved responses align closely with verified chemical reactions, minimizing hallucinations compared to pure LLM-based generation.
 
-# Future Work
+# 🎨 Future Work
 - This is Version V1 and next version will have graphics and better visual aids
 - 🧬 Multilingual RAG Expansion – Support Indian languages for wider access.
 - ⚙️ Dynamic Knowledge Ingestion – Allow uploading of new documents.
@@ -334,7 +334,7 @@ The system successfully demonstrated:
 - 🧠 Cross-domain Integration – Extend to physics and biology experiments.
 - 🔒 Secure Collaboration – Incorporate user experiment history and authentication.
 
-# Conclusion
+# 🧠 Conclusion
 The Virtual Chemistry RAG Lab showcases the potential of combining retrieval-augmented architectures with interactive learning interfaces for scientific domains.
 By grounding AI reasoning in transparent, verifiable text sources, the system enhances both trust and educational value in AI-driven science tools.
 This framework can be extended across multiple domains to promote explainable, domain-specific AI reasoning for academic and research applications.
