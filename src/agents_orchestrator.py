@@ -5,7 +5,7 @@ LangGraph-enabled orchestrator (strict-match enforcement).
 Key behavior:
 - Strict mode:
   - RetrievalAgent only accepts a retrieval hit if the retrieved text contains BOTH reactants
-    as whole-word/formula matches . Single-letter reactants (e.g. "s") require
+    as whole-word/formula matches (case-insensitive). Single-letter reactants (e.g. "s") require
     whole-word match or element-name match (e.g. "sulfur"), not substring matches.
   - If retrieval fails strict-match -> immediate "No known reaction found for exact reactants."
   - If retrieval passes strict-match -> FactCheck verifies using user's original input ("A + B"),
